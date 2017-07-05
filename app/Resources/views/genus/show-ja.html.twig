@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Genus - {{ name }} This is overriten title here fo this genus page
+{% endblock %}
+
+
+{% block body %}
+    {{ name }}
+    {{ dump() }}
+
+    {% for note in notes %}
+        {{ note }}
+        <br />
+    {% endfor %}
+
+
+    <br />
+    <br />
+    <br />
+
+    {% for inne in innes %}
+        {{ inne }}
+        <br />
+    {% endfor %}
+
+    <br />
+    <br />
+    <br />
+
+    {% for key, inne in innes %}
+        key: {{ key }} value: {{ inne }}
+        <br />
+    {% endfor %}
+{% endblock %}
